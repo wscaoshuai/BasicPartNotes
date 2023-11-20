@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"progect1/oop/encapsulate/model"
+	"nodes/logical/oop/encapsulate/model"
 )
 
 func main() {

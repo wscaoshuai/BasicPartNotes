@@ -2,19 +2,20 @@ package main
 
 import (
 	"fmt"
-	_ "progect1/closure"
-	_ "progect1/defer1"
-	_ "progect1/init" //(待修改)
-	_ "progect1/multiplication"
-	_ "progect1/pascal"
-	_ "progect1/suffix"
-	"progect1/usualfuncation/exeo"
 
-	/*该出放置别名，使用后后面的地址失效*/ /*"go_code/progect1/mode03"*/
-	_ "progect1/Fibonacci"
-	_ "progect1/monkey"
-	_ "progect1/swap"
-	_ "progect1/usualfuncation/error"
+	_ "nodes/logical/closure"
+	_ "nodes/logical/defer1"
+	_ "nodes/logical/init" //(待修改)
+	_ "nodes/logical/multiplication"
+	_ "nodes/logical/pascal"
+	_ "nodes/logical/suffix"
+	"nodes/logical/usualfuncation/exeo"
+
+	/*该出放置别名，使用后后面的地址失效*/ /*"nodes/logical/mode03"*/
+	_ "nodes/logical/Fibonacci"
+	_ "nodes/logical/monkey"
+	_ "nodes/logical/swap"
+	_ "nodes/logical/usualfuncation/error"
 	_ "time"
 )
 
@@ -93,17 +94,17 @@ func main() {
 
 	//递归课堂练习1
 	//斐波那契数列
-	//此处调用progect1文件夹下Fibonacci包下Fibonacci函数
+	//此处调用nodes/logical文件夹下Fibonacci包下Fibonacci函数
 	// result := Fibonacci.Fibonacci(10)
 	// fmt.Println("result=", result)
 
 	//递归课堂练习2
 	//猴子吃桃问题
-	//此处调用progect1文件夹下monkey包下monkey函数
+	//此处调用nodes/logical文件夹下monkey包下monkey函数
 	// result := monkey.Monkey(1)
 	// fmt.Println("reslut=", result)
 
-	//此处调用progect1文件夹下swap包下swap函数
+	//此处调用nodes/logical文件夹下swap包下swap函数
 	// a := 10
 	// b := 20
 	// swap.Swap(&a, &b)
@@ -113,7 +114,7 @@ func main() {
 	//每一个源文件都会有一个init函数，在main之前被go运行框架调用执行
 	//通常在init函数中完成初始化
 	//全局变量>init函数>main函数
-	//此处调用progect1文件夹下init包下init函数,来实现init函数下的全局变量的初始化
+	//此处调用nodes/logical文件夹下init包下init函数,来实现init函数下的全局变量的初始化
 	// age := 90
 	// fmt.Println("main...age=", age)
 	// fmt.Println("Age=", init.Age, "Name=", Init.name)
@@ -136,14 +137,14 @@ func main() {
 	//	fmt.Println("res4=", res4)
 
 	//闭包：一个函数与其相关的引用环境组合的一个整体
-	//此处调用progect1文件夹下closure包下closure函数
+	//此处调用nodes/logical文件夹下closure包下closure函数
 	// m := closure.AddUpper()
 	// fmt.Println(m(1)) //结果为：11
 	// fmt.Println(m(2)) //结果为：13
 	// fmt.Println(m(3)) //结果为：16
 
 	//闭包课堂练习1
-	//此处调用progect1文件夹下suffix包下Makesuffix函数
+	//此处调用nodes/logical文件夹下suffix包下Makesuffix函数
 	//使用 string.HasSuffix  函数，判断某个字符串是否有指定的后缀名
 	// n := suffix.Makesuffix(".jpg")   //此处指定一个后缀名
 	// fmt.Println("处理后的文件名=", n("ok")) //将函数赋值给n后调用n函数
@@ -153,13 +154,13 @@ func main() {
 	//2、defer后可以继续使用创建资源
 	//3、当函数完毕后，系统会一次从defer的栈中，取出语句，关闭资源。
 	//4、好处:不用关心何时关闭资源
-	//此处调用progect1文件夹下defer1包下Sum函数
+	//此处调用nodes/logical文件夹下defer1包下Sum函数
 	// res := defer1.Sum(10, 20)
 	// fmt.Println("res=", res)
 
 	//函数综合练习1
 	//九九乘法表
-	//此处调用progect1文件夹下multiplication包下Multiplication函数
+	//此处调用nodes/logical文件夹下multiplication包下Multiplication函数
 	// var S int
 	// fmt.Println("请输入行高")
 	// fmt.Scanln(&S)
@@ -168,7 +169,7 @@ func main() {
 
 	//函数综合练习2
 	//打印金字塔
-	//此处调用progect1文件夹下pascal包下Pascal函数
+	//此处调用nodes/logical文件夹下pascal包下Pascal函数
 	// var num int
 	// fmt.Println("请输入要打印的金字塔的高度")
 	// fmt.Scanln(&num)
@@ -179,78 +180,78 @@ func main() {
 
 	//字符串中常用的函数(系统函数)：
 	//1、统计字符串的长度、按照字节：len(str)[此处这个是内建函数]
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str1函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str1函数
 	//len_str.Len_str1()
 
 	//2、字符串遍历、同时处理有中文问题r:=[]rune(str)
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str2函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str2函数
 	//len_str.Len_str2()
 
 	//3、字符串转整数、 n,err:=strconv.Atoi("字符串")
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str3函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str3函数
 	//len_str.Len_str3()
 
 	//4、整数转字符串、 str=strconv.Itoa(整数)
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str4函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str4函数
 	//len_str.Len_str4()
 
 	//5、字符串转、 []byte: var bytes = []byte("hello go")
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str5函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str5函数
 	//len_str.Len_str5()
 
 	//6、[]byte 转 字符串：str=string([]byte{97,98,99})
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str6函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str6函数
 	//len_str.Len_str6()
 
 	//7、10进制转2,8,16进制： str=strconv.FormatInt(123,2)//2->8,16
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str7函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str7函数
 	//len_str.Len_str7()
 
 	//8、查找子串是否在指定的字符串中：string.Contains("seafood","foo")//结果为：true
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str8函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str8函数
 	// len_str.Len_str8()
 
 	//9、统计一个字符串有几个指定的子串：string.Count("ceheese","e")//结果为：4
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str9函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str9函数
 	//len_str.Len_str9()
 
 	//10、不区分大小写的字符串比较(==是区分字母大小写的):fmt.Println(string.EqualFold("abc","Abc"))//结果为：true
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str10函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str10函数
 	// len_str.Len_str10()
 
 	//11、返回子串在字符串第一次出现的index值，如果没有返回-1：string.Index("NLT_abc","abc")
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str11函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str11函数
 	// len_str.Len_str11()
 
 	//12、返回子串在字符串最后一次出现的index，如没有返回-1：string.LastIndex("go golang","go")
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str12函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str12函数
 	// len_str.Len_str12()
 
 	//13、将制定的子串替换成另外一个子串：string.Replace("go go hello","go","go语言",n) n可以指定你希望替换几个，如果n=-1表示全部替换
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str13函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str13函数
 	//len_str.Len_str13()
 
 	//14、按照指定的某个字符，为分隔标识符，将一个字符串拆分成字符串数组：string.Split("hello,world,ok",",")
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str14函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str14函数
 	//len_str.Len_str14()
 
 	//15、将字符串的字母进行大小写的转换：string.ToLower("Go")//go strings.ToUpper("Go")//Go
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str15函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str15函数
 	//len_str.Len_str15()
 
 	//16、将字符串左右两边的空格去掉：string.TrimSpace("tn a lon gopher ntrn")
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str16函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str16函数
 	//len_str.Len_str16()
 
 	//17、将字符串左右两边指定的字符去掉：string.Trim("!hello!","!") //["hello"] //将左边的！和""去掉
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str17函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str17函数
 	//len_str.Len_str17()
 
 	//18、将字符串左边指定的字符串去掉：string.TrimLeft("!hello!","!") //将左边的！和"" 去掉
 	//19、将字符串右边指定的字符串去掉：string.TrimRight("!hello!","!")//将右边的！和"" 去掉
 
 	//20、判断字符串是否以指定的字符串开头：string.HasPrefi("ftp://192.168.10.1","ftp")//true
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str20函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str20函数
 	//len_str.Len_str20()
 
 	//21、判断字符串是以指定的字符串结束：string.HasSuffix("NLT_abc.jpg","jpg")//false
@@ -291,7 +292,7 @@ func main() {
 	// fmt.Printf("unix时间戳=%v\n unix nano时间戳=%v", now.Unix(), now.UnixNano())
 
 	//编写一段代码来统计某个函数的执行时间
-	//此处调用progect1文件夹下usualfuncation文件夹下len_str包下Len_str21函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下len_str包下Len_str21函数
 	// start := time.Now().Unix()
 	// len_str.Len_str21()
 	// end := time.Now().Unix()
@@ -304,11 +305,11 @@ func main() {
 	//Go语言引入的处理方法：defer,panic,recover
 	//简单描述为：Go中抛出一个panic异常（既接受一个interface{}类型的值），然后在defer中通过recover捕获这个异常，然后在处理
 	//举例说明：
-	//此处调用progect1文件夹下usualfuncation文件夹下error包下Error函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下error包下Error函数
 	// error.Error()
 	// fmt.Println("main下面的代码...") //error函数内的函数如果不执行异常捕获，则不会执行该句
 
-	//此处调用progect1文件夹下usualfuncation文件夹下error包下Error函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下error包下Error函数
 	//用还函数读取配置文件init.config的信息
 	//如果传入的信息不符合函数内定义的，则返回一个自定义的错误名称
 	// err := error.ReadConf("confi.ini")
@@ -319,21 +320,21 @@ func main() {
 
 	//函数循环练习1
 	//循环打印输入的月份的天数[continue实现]
-	//此处调用progect1文件夹下usualfuncation文件夹下exeo包下Exeo01函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下exeo包下Exeo01函数
 	//exeo.Exeo01()
 
 	//函数循环练习2
 	//生成一个1-100的随机数，反复判断是否猜中
-	//此处调用progect1文件夹下usualfuncation文件夹下exeo包下Exeo02函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下exeo包下Exeo02函数
 	//exeo.Exeo02()
 
 	//函数循环练习3
 	//输入并判断是否是100以内的素数并且相加，且每行显示5个
-	//此处调用progect1文件夹下usualfuncation文件夹下exeo包下Exeo03函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下exeo包下Exeo03函数
 	//exeo.Exeo03()
 
 	//函数循环练习4
-	//此处调用progect1文件夹下usualfuncation文件夹下exeo包下Exeo04函数
+	//此处调用nodes/logical文件夹下usualfuncation文件夹下exeo包下Exeo04函数
 	//从1990.1.1起判断其中某一天是打渔还是晒网
 	exeo.Exeo04()
 

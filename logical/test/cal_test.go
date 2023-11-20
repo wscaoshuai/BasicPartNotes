@@ -1,13 +1,14 @@
-package cal
+package cal_test
 
 import (
 	"fmt"
+	cal "nodes/logical/test"
 	"testing"
 )
 
 func TestAddUpper(t *testing.T) {
 
-	res := addUpper(10) //调用
+	res := cal.AddUpper(10) //调用
 	if res != 55 {
 		t.Fatalf("AddUpper(10) 执行错误，期望值=%v 实际值=%v\n", 55, res)
 	}

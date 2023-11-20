@@ -1,6 +1,6 @@
 package cal
 
-func addUpper(n int) int { //被测试函数01
+func AddUpper(n int) int { //被测试函数01
 	res := 0
 	for i := 1; i <= n; i++ {
 		res += i
